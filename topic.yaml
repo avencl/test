@@ -1,7 +1,7 @@
 apiVersion: kafka.strimzi.io/v1beta2
 kind: KafkaTopic
 metadata:
-  name: kafka-topic
+  name: sb-rs.all.legacy-liability-alerts.v1
 spec:
   partitions: 8
   replicas: 3
