@@ -3,8 +3,10 @@ kind: KafkaTopic
 metadata:
   name: kafka-topic
 spec:
-  partitions: 48
+  partitions: 8
   replicas: 3
   config:
-    cleanup.policy: delete
+    cleanup.policy: compact,delete
+    delete.retention.ms: 259200000
+    min.compaction.lag.ms: 86400000
     retention.ms: 259200000
